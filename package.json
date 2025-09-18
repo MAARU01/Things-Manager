@@ -6,14 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "clean": " rm -rf dist node_modules .tauri/target",
     "preview": "vite preview",   
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "react:check": "prettier --check ./src",
+    "react:fix": "prettier --write ./src",
+    "tauri:check": "prettier --check ./src-tauri/src",
+    "tauri:fix": "prettier --write ./src-tauri/src"
   },   
   "dependencies": {
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "@tauri-apps/api": "^2",
-    "@tauri-apps/plugin-opener": "^2"   
+    "@tauri-apps/plugin-opener": "^2", 
+    "@tailwindcss/vite": "4.0.0-beta.8"
   },     
   "devDependencies": {
     "@types/react": "^19.1.8",
@@ -21,6 +27,7 @@
     "@vitejs/plugin-react": "^4.6.0",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
-    "@tauri-apps/cli": "^2"
+    "@tauri-apps/cli": "^2",
+    "prettier": "3.4.2"
   }
 }
